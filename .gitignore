@@ -40,3 +40,26 @@ captures/focus/
 
 # Fitted rig calibration, specific to one physical mounting
 calib.json
+
+# ---------------------------------------------------------------------------
+# Thesis manuscript, its drafts, and the printable build worksheets.
+# Kept local, deliberately not published.
+# ---------------------------------------------------------------------------
+Main draft.docx
+Main_draft_edited.docx
+Master_s_Thesis___Ayana-1.pdf
+SECTION_6_4_DRAFT.md
+THESIS_FIGURE_GUIDE.pdf
+THESIS_FIGURE_GUIDE_draft3.pdf
+THESIS_REPLACEMENT_TEXT.docx
+THESIS_REPLACEMENT_TEXT.md
+THESIS_REPLACEMENT_TEXT_3md.docx
+THESIS_REPLACEMENT_TEXT_3md.md
+THESIS_REPLACEMENT_TEXT_3md.pdf
+THESIS_REVISION_PLAN.md
+thesis1.md
+draft3.md
+dome_build_guide_R40_picam360.html
+dome_cutting_guide.html
+3.md
+THESIS_REPLACEMENT_TEXT_draft3.docx

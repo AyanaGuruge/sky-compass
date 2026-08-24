@@ -157,14 +157,13 @@ field heading. Section 6.4 reports this directly rather than dressing it up.
 - `outputs/` — generated figures and the accuracy tables reproduced above.
 - `captures/2026-07-31_dome/` — the real dome exposure bracket, with `EXPOSURE_NOTES.md`.
 - `Other images/` — photographs of the film, the gores, and the assembled dome.
-- `dome_build_guide_R40_picam360.html`, `dome_cutting_guide.html` — printable build and gore-cutting worksheets, including the glare test for identifying the film's transmission axis.
+- `RUNBOOK.md` — the operator's runbook for the Ubuntu rig: capture, calibration and estimation, step by step.
 
-### Thesis documents
+### The thesis itself
 
-`Master_s_Thesis___Ayana-1.pdf` is the submitted thesis. The markdown and `.docx`
-files (`3.md`, `draft2.md`, `draft3.md`, `thesis1.md`, `THESIS_*`) are the writing
-iterations, kept for provenance. `RUNBOOK.md` is the original operator's runbook for
-the Ubuntu rig.
+The manuscript is not published here. This repository holds the system — the models,
+the estimator, the build, and the results. For the full text, see the citation below
+or contact me.
 
 ---
 
