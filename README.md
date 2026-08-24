@@ -8,6 +8,12 @@ Information and Communication Technology: Robotics and Autonomous Systems, July 
 **Author:** Ayana Kotuwegoda Guruge
 **Supervisors:** Paavo Nevalainen, Jukka Heikkonen
 
+![Frame recorded through the polarizing dome, with the eight gores and the measured per-gore levels](Doc%20images/NEW_fig_6_4_dome_frame_annotated.png)
+
+*A real frame through the eight-gore polarizing dome, 31 July 2026. Every mark is an
+overlay — no shading or contrast adjustment was applied to the image data, and the
+per-gore levels on the right are measured from the unmodified pixels.*
+
 ---
 
 ## The problem
@@ -31,6 +37,12 @@ sweeps roughly **290° of the compass circle** while the sun climbs to only abou
 equator, where the sun passes close to the zenith and the polarization pattern is
 correspondingly well-conditioned. A low, fast-moving sun is a different sensing
 problem.
+
+<img src="Other%20images/WhatsApp%20Image%202026-07-28%20at%2020.46.01.jpeg" width="480" alt="Two sheets of linear polarizing film held against blue sky at different rotations, one bright and one dark">
+
+*The effect the sensor lives on, by hand: two sheets of the same linear polarizing
+film held against clear sky at different rotations. Skylight is partially polarized,
+so rotating the transmission axis changes how much of it gets through.*
 
 ## The approach
 
@@ -59,6 +71,8 @@ full circle, render the expected pattern for each, and take the candidate whose
 rendering correlates best with the measured frame. Nothing is trained, so it works
 from the first frame onward and there is no dataset dependency to defend.
 
+![Processing pipeline: capture, preprocessing, estimation, validation](Doc%20images/NEW_fig_4_4_processing_pipeline.png)
+
 ## Results
 
 Accuracy of the recovered azimuth on synthetic frames rendered at **real Turku sun
@@ -73,6 +87,8 @@ between 14 May and 14 July 2026. `gross` counts estimates wrong by more than 45�
 | radial dome, clear | 0.079° | 0.075° | 0.142° | 0.269° | 100.0 % | 0 |
 | radial dome, thin cloud | 5.687° | 2.120° | 8.432° | 179.911° | 75.0 % | 3 |
 | radial dome, heavy cloud | 65.634° | 20.783° | 177.324° | 179.839° | 18.5 % | 75 |
+
+![Median and mean absolute azimuth error by optic and sky condition, log scale](Doc%20images/NEW_fig_6_3a_error_by_condition.png)
 
 **Read those clear-sky numbers with the caveat they deserve.** The estimator
 compares a measured frame against the *same forward model* that rendered the
@@ -98,7 +114,10 @@ established the working point and overturned the prediction going in:
 > bare-lens value of ~50. The opposite is true. Anything at or above exposure 20
 > saturates the sky and destroys the signal entirely. **The usable window is 8–12.**
 
-That is the kind of result that only falls out of building the thing.
+That is the kind of result that only falls out of building the thing. The figure at
+the top of this page is a frame from that session.
+
+![Exposure bracket through the dome](Doc%20images/NEW_fig_5_1_exposure_bracket.png)
 
 ### What has not been demonstrated
 
