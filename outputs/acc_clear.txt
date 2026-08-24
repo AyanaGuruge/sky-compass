@@ -1,0 +1,10 @@
+drew 60 test positions from 5972 real daylight sun positions between 2026-05-14 and 2026-07-14
+optic: flat filter, film axis 35 deg, image up heading 0 deg
+sky:   d_max 0.75, sensor noise 0.020, clutter 0.00
+
+mean absolute error     0.075 deg
+median absolute error   0.073 deg
+90th percentile         0.144 deg
+worst case              0.206 deg
+fraction within 5 deg   100.0 percent
+mean confidence          1.78

@@ -1,0 +1,12 @@
+drew 60 test positions from 5972 real daylight sun positions between 2026-05-14 and 2026-07-14
+optic: flat filter, film axis 35 deg, image up heading 0 deg
+sky:   d_max 0.20, sensor noise 0.020, clutter 0.60
+
+mean absolute error    16.259 deg
+median absolute error   3.254 deg
+90th percentile        14.519 deg
+worst case            179.657 deg
+fraction within 5 deg    60.0 percent
+mean confidence          1.74
+
+4 of 60 estimates are gross failures above 45 degrees, which is the solar and antisolar ambiguity discussed in the limitations section

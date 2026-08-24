@@ -1,0 +1,12 @@
+Absolute azimuth error, degrees. n=200 sun positions drawn from the 5972
+real Turku daylight positions (elevation >= 5 deg), 14 May to 14 July 2026.
+Film axis 35 deg, image up heading 0 deg, sensor noise 0.020.
+'gross' counts estimates in error by more than 45 deg.
+
+condition          mean   median      p90       max  within5%   conf  gross
+flat_clear        0.078    0.075    0.138     0.272     100.0   1.80      0
+flat_thin         1.020    0.777    2.188     4.224     100.0   1.80      0
+flat_heavy       17.972    4.103   15.639   179.951      56.5   1.75     15
+radial_clear      0.079    0.075    0.142     0.269     100.0   1.78      0
+radial_thin       5.687    2.120    8.432   179.911      75.0   1.74      3
+radial_heavy     65.634   20.783  177.324   179.839      18.5   1.53     75

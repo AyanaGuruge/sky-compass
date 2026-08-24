@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Polarizing Dome Build Worksheet — PiCam360, R = 40 mm</title>
+<style>
+  :root{
+    --ink:#12161c; --soft:#4a5360; --line:#c3ccd6;
+    --axis:#1763c9; --sun:#e08a12; --cut:#c02626; --ok:#0d5a3a; --okbg:#e7f5ee;
+    --warn:#8a4b00; --warnbg:#fff4e2; --panel:#f5f7fa; --paper:#fff;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;background:#e9edf1;color:var(--ink);
+    font-family:"Segoe UI",system-ui,Helvetica,Arial,sans-serif;line-height:1.55;}
+  .sheet{max-width:900px;margin:22px auto;background:var(--paper);
+    padding:38px 46px 54px;box-shadow:0 2px 18px rgba(20,30,45,.12);}
+  header{border-bottom:2px solid var(--ink);padding-bottom:12px;margin-bottom:22px;}
+  .kicker{font:600 12px/1.2 "SFMono-Regular",Consolas,monospace;
+    letter-spacing:.16em;text-transform:uppercase;color:var(--axis);}
+  h1{font-size:24px;margin:6px 0 4px;letter-spacing:-.01em;}
+  .sub{color:var(--soft);font-size:14px;}
+  h2{font-size:18px;margin:30px 0 8px;padding-top:14px;border-top:1px solid var(--line);
+    display:flex;align-items:baseline;gap:12px;}
+  h2 .n{font:700 13px/1 "SFMono-Regular",Consolas,monospace;color:var(--paper);
+    background:var(--ink);padding:5px 8px;border-radius:3px;}
+  p{margin:8px 0;font-size:14.5px;}
+  ol,ul{margin:8px 0;padding-left:22px;font-size:14.5px;}
+  li{margin:5px 0;}
+  code{font-family:"SFMono-Regular",Consolas,monospace;background:#eef1f5;
+    padding:1px 5px;border-radius:3px;font-size:13px;}
+  table{border-collapse:collapse;width:100%;font-size:13.5px;margin:10px 0;}
+  th,td{border:1px solid var(--line);padding:6px 9px;text-align:left;}
+  th{background:var(--panel);font-weight:600;}
+  td.v{font-family:"SFMono-Regular",Consolas,monospace;}
+  .callout{border-left:4px solid var(--ok);background:var(--okbg);padding:11px 15px;
+    border-radius:0 6px 6px 0;margin:12px 0;font-size:14px;}
+  .callout.warn{border-left-color:var(--warn);background:var(--warnbg);}
+  .callout .lbl{font:700 11px/1 "SFMono-Regular",Consolas,monospace;letter-spacing:.12em;
+    text-transform:uppercase;display:block;margin-bottom:5px;color:var(--ok);}
+  .callout.warn .lbl{color:var(--warn);}
+  .fig{margin:14px 0;padding:16px;background:var(--panel);border:1px solid var(--line);border-radius:6px;}
+  .cap{font-size:12.5px;color:var(--soft);margin-top:8px;font-family:"SFMono-Regular",Consolas,monospace;}
+  .cal{display:flex;align-items:center;gap:10px;margin:6px 0 14px;font-size:12.5px;color:var(--cut);
+    font-family:"SFMono-Regular",Consolas,monospace;}
+  .legend{font-size:12.5px;color:var(--soft);margin:4px 0 0;}
+  .legend b{color:var(--ink);}
+  .foot{margin-top:32px;padding-top:12px;border-top:1px solid var(--line);font-size:12px;color:var(--soft);}
+  @media print{
+    html,body{background:#fff;}
+    .sheet{box-shadow:none;margin:0;max-width:100%;padding:0 8mm;}
+    h2{break-after:avoid;} .fig,.callout,table{break-inside:avoid;}
+    .noprint{display:none;}
+  }
+</style>
+</head>
+<body>
+<div class="sheet">
+
+<header>
+  <div class="kicker">Bio-inspired sky compass // build worksheet</div>
+  <h1>Polarizing Dome + Box Mount</h1>
+  <div class="sub">PiCam360 fisheye (~38&times;38&times;30&nbsp;mm) &nbsp;·&nbsp; dome radius R = 40&nbsp;mm &nbsp;·&nbsp; N = 8 gores &nbsp;·&nbsp; all 8 from one film sheet, three spare</div>
+</header>
+
+<div class="callout warn noprint">
+  <span class="lbl">Print setting</span>
+  Print at <b>100% scale</b>, "Actual size", fit-to-page OFF. Then measure the red 30&nbsp;mm bar below each template with a ruler. If it is not exactly 30&nbsp;mm, do not cut from the printout — use the hand-tracing table instead, which is scale-proof.
+</div>
+
+<!-- SECTION 1 -->
+<h2><span class="n">1</span> Confirm the transmission axis (do this first)</h2>
+<p>The LCD test cannot tell the pass axis from the block axis, and being 90&deg; wrong flips the whole design. Use the glare test, which is unambiguous.</p>
+<ol>
+  <li>Find glare bouncing off a horizontal shiny surface (an off phone screen, glass, water) at a shallow angle.</li>
+  <li>Look at the glare through the film and rotate until the glare is <b>dimmest</b>.</li>
+  <li>At that rotation the <b>transmission axis is vertical</b>. Draw a permanent arrow along it. This arrow, not the blue line, is your reference.</li>
+</ol>
+<div class="callout">
+  <span class="lbl">Rule</span>
+  Cut every gore so the <b>transmission arrow runs lengthwise, tip to base</b>. Assembled, the axes fan outward from the apex (radial), which makes the dark band point at the sun.
+</div>
+
+<!-- SECTION 2 -->
+<h2><span class="n">2</span> Gore template, 8 identical petals</h2>
+<p>Trace by hand from the table (scale-proof), or cut from the 1:1 template if the calibration bar checks out. Add an <b>8&nbsp;mm tuck tab</b> below the base line; fold it there later.</p>
+
+<table>
+  <tr><th>Distance from apex (s)</th><th>Half-width each side</th></tr>
+  <tr><td class="v">0 cm</td><td class="v">0.0 mm</td></tr>
+  <tr><td class="v">1 cm</td><td class="v">3.9 mm</td></tr>
+  <tr><td class="v">2 cm</td><td class="v">7.5 mm</td></tr>
+  <tr><td class="v">3 cm</td><td class="v">10.7 mm</td></tr>
+  <tr><td class="v">4 cm</td><td class="v">13.2 mm</td></tr>
+  <tr><td class="v">5 cm</td><td class="v">14.9 mm</td></tr>
+  <tr><td class="v">6 cm</td><td class="v">15.7 mm</td></tr>
+  <tr><td class="v">6.28 cm (base)</td><td class="v">15.7 mm</td></tr>
+</table>
+<p class="legend">Length L = &pi;R/2 = 62.8&nbsp;mm. Base width W = 2&pi;R/N = 31.4&nbsp;mm. Half-width(s) = 15.71&nbsp;&times;&nbsp;sin(s/40).</p>
+
+<div class="fig">
+  <div class="cal"><svg width="30mm" height="6mm" viewBox="0 0 30 6"><rect x="0" y="1" width="30" height="3" fill="none" stroke="#c02626" stroke-width="0.4"/><line x1="0" y1="0.5" x2="0" y2="4.5" stroke="#c02626" stroke-width="0.4"/><line x1="30" y1="0.5" x2="30" y2="4.5" stroke="#c02626" stroke-width="0.4"/></svg><span>&larr; this bar must measure 30 mm &rarr;</span></div>
+  <svg id="gore" width="40mm" height="86mm" viewBox="0 0 40 86" xmlns="http://www.w3.org/2000/svg"></svg>
+  <div class="cap">One gore at 1:1. Blue arrow = transmission axis, tip to base. Dashed box = tuck tab.</div>
+</div>
+
+<!-- SECTION 3 -->
+<h2><span class="n">3</span> Sheet layout, one sheet is enough</h2>
+<p>Place gores with the long axis <b>parallel to the transmission arrow</b> (parallel to the blue line on your sheet, so vertical). Six across the 200&nbsp;mm width, two rows down the 150&nbsp;mm height. All eight fit on one sheet; keep the other three sheets as spares.</p>
+
+<!-- SECTION 4 -->
+<h2><span class="n">4</span> Box-lid mount with slits</h2>
+<p>Camera sits on top of the lid, lens up. Eight slits around a 40&nbsp;mm octagon receive the gore tabs.</p>
+<div class="fig">
+  <div class="cal"><svg width="30mm" height="6mm" viewBox="0 0 30 6"><rect x="0" y="1" width="30" height="3" fill="none" stroke="#c02626" stroke-width="0.4"/><line x1="0" y1="0.5" x2="0" y2="4.5" stroke="#c02626" stroke-width="0.4"/><line x1="30" y1="0.5" x2="30" y2="4.5" stroke="#c02626" stroke-width="0.4"/></svg><span>&larr; this bar must measure 30 mm &rarr;</span></div>
+  <svg id="lid" width="110mm" height="110mm" viewBox="0 0 110 110" xmlns="http://www.w3.org/2000/svg"></svg>
+  <div class="cap">Lid layout at 1:1. Red = the eight slits to cut. Grey square = camera board (38 mm). Small square = cable slit.</div>
+</div>
+<ol>
+  <li>Mark the lid centre, draw the octagon (vertices 40&nbsp;mm from centre), cut a slit along each of the 8 edges.</li>
+  <li>Tape the camera board flat at the centre, lens up. Cut a cable slit beside it, clear of the octagon.</li>
+  <li>Level the lid with a phone level, then mark <b>North</b> on the rim with a compass.</li>
+  <li>Keep the lid from rising above the lens, or its edge will show as a dark rim at the horizon. Check with one test frame.</li>
+</ol>
+
+<!-- SECTION 5 -->
+<h2><span class="n">5</span> Assemble</h2>
+<ol>
+  <li>Fold each tab 90&deg; along the base line and push it through its slit. Bases sit on the octagon, tips rise to the centre.</li>
+  <li>Bring the 8 tips together at the apex, ~40&nbsp;mm above the lid, aligned symmetrically.</li>
+  <li>Tape the long seams from outside, the apex from inside. A tiny apex imperfection is harmless; at Turku the sun never reaches the zenith.</li>
+  <li>Keep every transmission arrow tip-to-base. One rotated gore breaks the radial fan.</li>
+</ol>
+
+<!-- SECTION 6 -->
+<h2><span class="n">6</span> Register and capture</h2>
+<ul>
+  <li>Fixed exposure and white balance, level lid, North recorded.</li>
+  <li>UTC timestamp on every frame; the sun position then labels each frame for free.</li>
+  <li>Never aim the bare lens at the sun. The compass reads the blue sky away from it.</li>
+</ul>
+
+<div class="foot">
+  Worksheet for a bio-inspired polarized-skylight compass. R = 40 mm, N = 8. Verify the transmission axis by the glare test and the print scale by the 30 mm bar before cutting.
+</div>
+
+<script>
+const NS="http://www.w3.org/2000/svg";
+function el(p,t,a){const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);p.appendChild(e);return e;}
+function txt(p,x,y,s,o){o=o||{};const e=el(p,"text",{x:x,y:y,"font-size":(o.s||3),fill:(o.f||"#4a5360"),"text-anchor":(o.a||"middle"),"font-family":"monospace"});e.textContent=s;return e;}
+
+// ---- Gore, 1:1 in mm ----
+(function(){
+  const sv=document.getElementById("gore");
+  const R=40, N=8, L=Math.PI/2*R, W=2*Math.PI*R/N, hw=W/2;
+  const cx=20, top=5, baseY=top+L;               // apex..base
+  const tabH=8, tabW=28;
+  // petal path
+  const steps=60, left=[], right=[];
+  for(let i=0;i<=steps;i++){const s=i/steps*L;const w=hw*Math.sin(s/R);
+    left.push([cx-w, top+s]); right.push([cx+w, top+s]);}
+  const d="M "+left.concat(right.reverse()).map(p=>p[0].toFixed(2)+","+p[1].toFixed(2)).join(" L ")+" Z";
+  el(sv,"path",{d:d,fill:"rgba(23,99,201,0.07)",stroke:"#12161c","stroke-width":0.4,"stroke-linejoin":"round"});
+  // tuck tab
+  el(sv,"rect",{x:(cx-tabW/2).toFixed(2),y:baseY.toFixed(2),width:tabW,height:tabH,
+    fill:"none",stroke:"#12161c","stroke-width":0.35,"stroke-dasharray":"1.5 1"});
+  el(sv,"line",{x1:(cx-hw).toFixed(2),y1:baseY.toFixed(2),x2:(cx+hw).toFixed(2),y2:baseY.toFixed(2),
+    stroke:"#12161c","stroke-width":0.35});
+  // transmission axis arrow, tip->base
+  el(sv,"line",{x1:cx,y1:top+3,x2:cx,y2:baseY-2,stroke:"#1763c9","stroke-width":0.6});
+  el(sv,"path",{d:`M ${cx} ${baseY-0.5} l -1.4 -2.4 l 2.8 0 Z`,fill:"#1763c9"});
+  txt(sv,cx+2.5,(top+baseY)/2,"axis",{s:3,f:"#1763c9",a:"start"});
+  txt(sv,cx,top-1,"apex",{s:2.6});
+  txt(sv,cx,baseY+tabH+3,"tab (fold + tuck)",{s:2.6,f:"#8a4b00"});
+})();
+
+// ---- Lid octagon, 1:1 in mm ----
+(function(){
+  const sv=document.getElementById("lid");
+  const R=40, cx=55, cy=55;
+  // octagon vertices, start at top
+  const V=[];
+  for(let k=0;k<8;k++){const a=(-90+k*45)*Math.PI/180;V.push([cx+R*Math.cos(a),cy+R*Math.sin(a)]);}
+  // guide octagon (thin)
+  let d="M "+V.map(p=>p[0].toFixed(2)+","+p[1].toFixed(2)).join(" L ")+" Z";
+  el(sv,"path",{d:d,fill:"none",stroke:"#c3ccd6","stroke-width":0.3,"stroke-dasharray":"1 1"});
+  // the 8 slits = the 8 edges, drawn thick red
+  for(let k=0;k<8;k++){const a=V[k],b=V[(k+1)%8];
+    el(sv,"line",{x1:a[0].toFixed(2),y1:a[1].toFixed(2),x2:b[0].toFixed(2),y2:b[1].toFixed(2),
+      stroke:"#c02626","stroke-width":0.9,"stroke-linecap":"round"});}
+  // camera board 38mm
+  el(sv,"rect",{x:(cx-19).toFixed(2),y:(cy-19).toFixed(2),width:38,height:38,
+    fill:"rgba(74,83,96,0.10)",stroke:"#4a5360","stroke-width":0.4});
+  txt(sv,cx,cy-1,"camera",{s:3.2,f:"#4a5360"});
+  txt(sv,cx,cy+3.5,"38 mm",{s:2.8,f:"#4a5360"});
+  // lens circle
+  el(sv,"circle",{cx:cx,cy:cy,r:12,fill:"none",stroke:"#4a5360","stroke-width":0.3,"stroke-dasharray":"1 1"});
+  // centre mark
+  el(sv,"circle",{cx:cx,cy:cy,r:0.7,fill:"#12161c"});
+  // cable slit (offset, clear of octagon) lower-right
+  el(sv,"rect",{x:(cx+3).toFixed(2),y:(cy+21).toFixed(2),width:9,height:2.4,
+    fill:"#c02626",stroke:"#c02626","stroke-width":0.3});
+  txt(sv,cx+7.5,(cy+27),"cable slit",{s:2.6,f:"#c02626"});
+  // North arrow at top rim
+  el(sv,"line",{x1:cx,y1:8,x2:cx,y2:2,stroke:"#12161c","stroke-width":0.5});
+  el(sv,"path",{d:`M ${cx} 1 l -1.3 2.2 l 2.6 0 Z`,fill:"#12161c"});
+  txt(sv,cx+5,4,"mark North here",{s:2.8,a:"start"});
+  // radius dimension
+  el(sv,"line",{x1:cx,y1:cy,x2:V[2][0].toFixed(2),y2:V[2][1].toFixed(2),stroke:"#8a4b00","stroke-width":0.3});
+  txt(sv,cx+21,cy-2,"R = 40 mm",{s:2.8,f:"#8a4b00",a:"start"});
+})();
+</script>
+</div>
+</body>
+</html>

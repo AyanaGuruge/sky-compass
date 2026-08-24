@@ -1,0 +1,42 @@
+# ---------------------------------------------------------------------------
+# Generated datasets. Each images.npy is ~126 MB, above GitHub's 100 MB hard
+# limit, and every one of them is reproducible:
+#     python3 synthetic_sky_polarizer.py --dataset outputs/dataset_flat
+# ---------------------------------------------------------------------------
+outputs/dataset_*/
+*.npy
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Archives, unpacked copies live beside them
+*.zip
+
+# Supervisor's MATLAB / video material, not mine to redistribute
+whereIsTheSun/
+whereIsTheSun.zip
+
+# Working notes from the writing sessions, not part of the deliverable
+HANDOFF_*.md
+
+# Office lock files and loose screenshots
+~$*
+Pasted image.png
+Screenshot*.png
+changes/
+
+# Raw capture sessions. Only captures/2026-07-31_dome is tracked, because it
+# is the dome data behind Figure 6.4; the rest are bare-lens focus tests.
+captures/*
+!captures/2026-07-31_dome/
+captures/*.png
+captures/focus/
+
+# Local agent settings
+.claude/
+
+# Fitted rig calibration, specific to one physical mounting
+calib.json
